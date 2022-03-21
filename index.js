@@ -11,7 +11,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-	res.sendFile("public/login.html", { root: __dirname });
+	res.sendFile("public/login/login.html", { root: __dirname });
+});
+
+app.get("/contactus", (req, res) => {
+	res.sendFile("public/contactus/contactus.html", { root: __dirname });
 });
 
 http: app.listen(port, () => {
