@@ -10,12 +10,23 @@
     <link rel="stylesheet" href="./contactus.css">
     <script>
 
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        navigator.geolocation.getCurrentPosition((success) => {
+            alert(success.coords.latitude + ":" + success.coords.longitude)
+        }, (error) => {
+            console.log(error);
+        }, options)
     </script>
 </head>
 
 <body class="background">
     <!--Used to denotes structure for the end user-->
-    <h2>Contact Us</h2>
+    <h2><strong>Contact Us</h2></strong>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eius, beatae obcaecati sit, nostrum culpa,
         veritatis aliquam sapiente porro voluptate animi odio officiis asperiores repudiandae delectus praesentium unde
         adipisci! Cupiditate.</p>
